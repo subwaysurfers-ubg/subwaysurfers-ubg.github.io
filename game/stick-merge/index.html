@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stick Merge Unblocked - Student Game Portal</title>
+    <meta name="description" content="Combine guns and defend your base in Stick Merge unblocked. A perfect strategy game for school breaks with easy controls and fun levels.">
+    <link rel="canonical" href="https://subwaysurfers-ubg.github.io/game/stick-merge/">
+    <meta property="og:title" content="Stick Merge Unblocked - Student Game Portal">
+    <meta property="og:description" content="Combine guns and defend your base in Stick Merge unblocked. A perfect strategy game for school breaks with easy controls and fun levels.">
+    <meta property="og:url" content="https://subwaysurfers-ubg.github.io/game/stick-merge/">
+    <meta property="og:image" content="https://subwaysurfers-ubg.github.io/assets/img/stick-merge.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="subwaysurfers-ubg.github.io">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --panel-color: #161b22;
+            --card-color: #21262d;
+            --text-color: #c9d1d9;
+            --accent-color: #58a6ff;
+            --btn-text: #000000;
+            --layout-width: 1135px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg-color);
+            color: var(--text-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: var(--layout-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropbtn {
+            background: none;
+            border: none;
+            color: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            cursor: pointer;
+            font-weight: 600;
+            padding: 8px 0;
+            outline: none;
+        }
+
+        .dropbtn:focus {
+            color: var(--accent-color);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: var(--panel-color);
+            min-width: 180px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            z-index: 99;
+            border-radius: 8px;
+            top: 100%;
+            left: 0;
+            border: 1px solid rgba(128, 128, 128, 0.15);
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            color: var(--text-color);
+            padding: 12px 18px;
+            display: block;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-content a:hover {
+            background: var(--accent-color);
+            color: var(--btn-text);
+        }
+
+        .dropdown:hover .dropdown-content,
+        .dropdown:focus-within .dropdown-content {
+            display: block;
+        }
+
+        .align-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .grid-container {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .app-box {
+            background: var(--card-color);
+            border-radius: 7px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(128, 128, 128, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .app-box:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+            border-color: var(--accent-color);
+        }
+
+        .app-box a {
+            display: block;
+            height: 100%;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .app-box img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+        }
+
+        .app-name {
+            display: block;
+            padding: 14px 10px;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .page-title {
+            margin-top: 0;
+            font-size: 32px;
+            font-weight: 800;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 10px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .badge-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .topic-tag a {
+            display: inline-block;
+            padding: 6px 14px;
+            background: rgba(128, 128, 128, 0.05);
+            border: 1px solid rgba(128, 128, 128, 0.2);
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.2s ease;
+        }
+
+        .topic-tag a:hover {
+            background: var(--accent-color);
+            color: var(--btn-text);
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .content-box {
+            background: var(--card-color);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 40px 0;
+            border: 1px solid rgba(128, 128, 128, 0.1);
+            line-height: 1.8;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .content-box h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: var(--accent-color);
+        }
+
+        .qa-container {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(128, 128, 128, 0.2);
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+        }
+
+        .faq-item h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        .faq-item p {
+            margin-top: 0;
+            opacity: 0.9;
+        }
+
+        .frame-box {
+            width: 100%;
+            background: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(128, 128, 128, 0.2);
+        }
+
+        .media-wrap {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+        }
+
+        .media-wrap iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .action-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .share-btns {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .share-btn {
+            padding: 12px 20px;
+            font-size: 14px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .fb-btn {
+            background: #1877F2;
+        }
+
+        .x-btn {
+            background: #0f1419;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: var(--btn-text);
+            padding: 14px 28px;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .pseudo-fullscreen {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            z-index: 99999 !important;
+            background: #000;
+            border: none !important;
+        }
+
+        .compact-header {
+            background: var(--panel-color);
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+        }
+
+        .site-logo {
+            font-size: 12px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            text-align: left;
+        }
+
+        .main-wrapper {
+            max-width: var(--layout-width);
+            margin: 0 auto;
+            width: 100%;
+            padding: 40px 20px;
+        }
+
+        .site-footer {
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid rgba(128, 128, 128, 0.2);
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.8;
+            background: var(--panel-color);
+        }
+
+        .share-btn,
+        .btn-primary {
+            border-radius: 8px;
+            font-weight: 700;
+            text-transform: none;
+        }
+
+        .share-btn:hover,
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .align-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+                justify-content: center;
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+
+            .grid-container {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 15px;
+            }
+
+            .action-controls {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+
+            .share-btns {
+                justify-content: center;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://subwaysurfers-ubg.github.io/assets/img/favicon.png" type="image/png">
+</head>
+
+<body>
+
+    <header class="compact-header">
+        <div class="container flex-center-header align-header">
+            <a href="https://subwaysurfers-ubg.github.io/" class="site-logo">subwaysurfers-ubg.github.io</a>
+            <nav class="compact-menu">
+                <ul>
+                    <li><a href="https://subwaysurfers-ubg.github.io/category/all/">All Games</a></li>
+                    <li><a href="https://subwaysurfers-ubg.github.io/category/shooter/">Shooter</a></li>
+                    <li><a href="https://subwaysurfers-ubg.github.io/category/simulation/">Simulation</a></li>
+                    <li><a href="https://subwaysurfers-ubg.github.io/category/casual/">Casual</a></li>
+                    <li><a href="https://subwaysurfers-ubg.github.io/category/puzzle/">Puzzle</a></li>
+                    <li><a href="https://subwaysurfers-ubg.github.io/category/action/">Action</a></li>
+                    <li><a href="https://subwaysurfers-ubg.github.io/category/multiplayer/">Multiplayer</a></li>
+                    <li><a href="https://subwaysurfers-ubg.github.io/category/arcade/">Arcade</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn" aria-haspopup="true" aria-expanded="false" role="button">More &#9662;</button>
+                        <div class="dropdown-content" role="menu">
+                            <a href="https://subwaysurfers-ubg.github.io/category/racing/" role="menuitem">Racing</a><a href="https://subwaysurfers-ubg.github.io/category/platformer/" role="menuitem">Platformer</a><a href="https://subwaysurfers-ubg.github.io/category/adventure/" role="menuitem">Adventure</a><a href="https://subwaysurfers-ubg.github.io/category/skill/" role="menuitem">Skill</a><a href="https://subwaysurfers-ubg.github.io/category/retro/" role="menuitem">Retro</a><a href="https://subwaysurfers-ubg.github.io/category/strategy/" role="menuitem">Strategy</a><a href="https://subwaysurfers-ubg.github.io/category/idle/" role="menuitem">Idle</a><a href="https://subwaysurfers-ubg.github.io/category/sports/" role="menuitem">Sports</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container main-wrapper">
+        <div class="game-page-wrapper">
+
+            <h1 class="page-title">🏆 Stick Merge Unblocked</h1>
+            <ul class="badge-list">
+                <li class="topic-tag"><a href="https://subwaysurfers-ubg.github.io/category/strategy/">Strategy Games</a></li>
+                <li class="topic-tag"><a href="https://subwaysurfers-ubg.github.io/category/action/">Action Games</a></li>
+            </ul>
+            <div class="frame-box">
+                <div class="media-wrap">
+                    <iframe id="game-iframe" src="https://subwaysurfers-ubg.github.io/embed/stick-merge.html" allowfullscreen scrolling="no" title="Play Stick Merge"></iframe>
+                </div>
+            </div>
+
+            <div class="action-controls">
+                <div class="share-btns">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsubwaysurfers-ubg.github.io%2Fgame%2Fstick-merge%2F" target="_blank" rel="noopener noreferrer" class="share-btn fb-btn">Facebook</a>
+                    <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsubwaysurfers-ubg.github.io%2Fgame%2Fstick-merge%2F&text=Play%20Stick%20Merge%20Unblocked!" target="_blank" rel="noopener noreferrer" class="share-btn x-btn">X</a>
+                </div>
+                <button class="btn-primary" id="btn-fullscreen" aria-label="Toggle Fullscreen">
+                    &#10021; Fullscreen
+                </button>
+            </div>
+
+
+
+            <div class="content-box">
+                <article>
+                    <h2>About Stick Merge</h2>
+                    <p>Stick Merge unblocked is a super addictive game where you combine guns to create the ultimate arsenal. You start with basic pistols and keep merging them until you have massive firepower to take down the stickman bosses. Using this unblocked stick merge version at school is great because it saves your progress automatically between classes. The gameplay is really simple but trying to unlock every single weapon keeps you coming back for more. You have to be smart about how you spend your coins to upgrade your defenders efficiently. It is definitely a top-tier strategy game for when you have a bit of free time. See if you can reach the final level and become the master of the stick army today. Your base depends on how fast you can click and merge those weapons.</p>
+                    <section class="qa-container">
+                        <h2>Stick Merge FAQ</h2>
+                        <div class="faq-item">
+                            <h3>What is the best gun?</h3>
+                            <p>The higher the level of the gun you merge, the more damage it deals to the enemy waves.</p>
+                        </div>
+                    </section>
+                </article>
+            </div>
+            <div class="recommended-section">
+                <h2>🎲 Trending Now</h2>
+                <ul class="grid-container">
+                    <li class="app-box">
+                        <a href="https://subwaysurfers-ubg.github.io/game/1v1-lol/" title="1v1 Lol">
+                            <img src="https://subwaysurfers-ubg.github.io/assets/img/1v1-lol.webp" alt="1v1 Lol" loading="lazy">
+                            <span class="app-name">1v1 Lol</span>
+                        </a>
+                    </li>
+
+                    <li class="app-box">
+                        <a href="https://subwaysurfers-ubg.github.io/game/cookie-clicker/" title="Cookie Clicker">
+                            <img src="https://subwaysurfers-ubg.github.io/assets/img/cookie-clicker.webp" alt="Cookie Clicker" loading="lazy">
+                            <span class="app-name">Cookie Clicker</span>
+                        </a>
+                    </li>
+
+                    <li class="app-box">
+                        <a href="https://subwaysurfers-ubg.github.io/game/masked-forces/" title="Masked Forces">
+                            <img src="https://subwaysurfers-ubg.github.io/assets/img/masked-forces.webp" alt="Masked Forces" loading="lazy">
+                            <span class="app-name">Masked Forces</span>
+                        </a>
+                    </li>
+
+                    <li class="app-box">
+                        <a href="https://subwaysurfers-ubg.github.io/game/tunnel-rush/" title="Tunnel Rush">
+                            <img src="https://subwaysurfers-ubg.github.io/assets/img/tunnel-rush.webp" alt="Tunnel Rush" loading="lazy">
+                            <span class="app-name">Tunnel Rush</span>
+                        </a>
+                    </li>
+
+                    <li class="app-box">
+                        <a href="https://subwaysurfers-ubg.github.io/game/hills-of-steel/" title="Hills Of Steel">
+                            <img src="https://subwaysurfers-ubg.github.io/assets/img/hills-of-steel.webp" alt="Hills Of Steel" loading="lazy">
+                            <span class="app-name">Hills Of Steel</span>
+                        </a>
+                    </li>
+
+                    <li class="app-box">
+                        <a href="https://subwaysurfers-ubg.github.io/game/tictactoe/" title="Tictactoe">
+                            <img src="https://subwaysurfers-ubg.github.io/assets/img/tictactoe.webp" alt="Tictactoe" loading="lazy">
+                            <span class="app-name">Tictactoe</span>
+                        </a>
+                    </li>
+
+                    <li class="app-box">
+                        <a href="https://subwaysurfers-ubg.github.io/game/super-mario-bros/" title="Super Mario Bros">
+                            <img src="https://subwaysurfers-ubg.github.io/assets/img/super-mario-bros.webp" alt="Super Mario Bros" loading="lazy">
+                            <span class="app-name">Super Mario Bros</span>
+                        </a>
+                    </li>
+
+                    <li class="app-box">
+                        <a href="https://subwaysurfers-ubg.github.io/game/ape-sling/" title="Ape Sling">
+                            <img src="https://subwaysurfers-ubg.github.io/assets/img/ape-sling.webp" alt="Ape Sling" loading="lazy">
+                            <span class="app-name">Ape Sling</span>
+                        </a>
+                    </li>
+
+                    <li class="app-box">
+                        <a href="https://subwaysurfers-ubg.github.io/game/age-of-war/" title="Age Of War">
+                            <img src="https://subwaysurfers-ubg.github.io/assets/img/age-of-war.webp" alt="Age Of War" loading="lazy">
+                            <span class="app-name">Age Of War</span>
+                        </a>
+                    </li>
+
+                    <li class="app-box">
+                        <a href="https://subwaysurfers-ubg.github.io/game/speed-stars/" title="Speed Stars">
+                            <img src="https://subwaysurfers-ubg.github.io/assets/img/speed-stars.webp" alt="Speed Stars" loading="lazy">
+                            <span class="app-name">Speed Stars</span>
+                        </a>
+                    </li>
+
+                    <li class="app-box">
+                        <a href="https://subwaysurfers-ubg.github.io/game/bad-ice-cream-2/" title="Bad Ice Cream 2">
+                            <img src="https://subwaysurfers-ubg.github.io/assets/img/bad-ice-cream-2.webp" alt="Bad Ice Cream 2" loading="lazy">
+                            <span class="app-name">Bad Ice Cream 2</span>
+                        </a>
+                    </li>
+
+                    <li class="app-box">
+                        <a href="https://subwaysurfers-ubg.github.io/game/moto-x3m/" title="Moto X3M">
+                            <img src="https://subwaysurfers-ubg.github.io/assets/img/moto-x3m.webp" alt="Moto X3M" loading="lazy">
+                            <span class="app-name">Moto X3M</span>
+                        </a>
+                    </li>
+
+                    <li class="app-box">
+                        <a href="https://subwaysurfers-ubg.github.io/game/drift-boss/" title="Drift Boss">
+                            <img src="https://subwaysurfers-ubg.github.io/assets/img/drift-boss.webp" alt="Drift Boss" loading="lazy">
+                            <span class="app-name">Drift Boss</span>
+                        </a>
+                    </li>
+
+                    <li class="app-box">
+                        <a href="https://subwaysurfers-ubg.github.io/game/drift-hunters/" title="Drift Hunters">
+                            <img src="https://subwaysurfers-ubg.github.io/assets/img/drift-hunters.webp" alt="Drift Hunters" loading="lazy">
+                            <span class="app-name">Drift Hunters</span>
+                        </a>
+                    </li>
+
+                    <li class="app-box">
+                        <a href="https://subwaysurfers-ubg.github.io/game/2048/" title="2048">
+                            <img src="https://subwaysurfers-ubg.github.io/assets/img/2048.webp" alt="2048" loading="lazy">
+                            <span class="app-name">2048</span>
+                        </a>
+                    </li>
+
+                    <li class="app-box">
+                        <a href="https://subwaysurfers-ubg.github.io/game/red-ball-4/" title="Red Ball 4">
+                            <img src="https://subwaysurfers-ubg.github.io/assets/img/red-ball-4.webp" alt="Red Ball 4" loading="lazy">
+                            <span class="app-name">Red Ball 4</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "VideoGame",
+                "name": "Stick Merge",
+                "description": "Stick Merge unblocked is a super addictive game where you combine guns to create the ultimate arsenal. You start with basic pistols and keep merging them until you have massive firepower to take down the stickman bosses. Using this unblocked stick merge version at school is great because it saves your progress automatically between classes. The gameplay is really simple but trying to unlock every single weapon keeps you coming back for more. You have to be smart about how you spend your coins to upgrade your defenders efficiently. It is definitely a top-tier strategy game for when you have a bit of free time. See if you can reach the final level and become the master of the stick army today. Your base depends on how fast you can click and merge those weapons.",
+                "applicationCategory": "Game"
+            }
+        </script>
+    </main>
+    <footer class="site-footer">
+        <div class="copyright">subwaysurfers-ubg.github.io - Unblocked Games</div>
+        <div class="footer-links"><a href="https://subwaysurfers-ubg.github.io/page/privacy/">Your Privacy Comes First</a><a href="https://subwaysurfers-ubg.github.io/page/dmca/">Copyright &amp; DMCA</a></div>
+    </footer>
+
+    <script>
+        window.addEventListener('load', function() {
+            var img = new Image();
+            img.src = "https://counter.yadro.ru/hit?t45.1;r=" + encodeURIComponent(document.referrer) + ";u=" + encodeURIComponent(document.URL) + ";h=" + encodeURIComponent(document.title.substring(0, 150)) + ";" + Math.random();
+        });
+    </script>
+    <script src="https://subwaysurfers-ubg.github.io/assets/js/app.js"></script>
+</body>
+
+</html>
