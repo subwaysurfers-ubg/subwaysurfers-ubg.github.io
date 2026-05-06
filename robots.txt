@@ -1,3 +1,3 @@
 User-agent: *
-Disallow: /embed/
+Disallow: /game-frame/
 Sitemap: https://subwaysurfers-ubg.github.io/sitemap.xml

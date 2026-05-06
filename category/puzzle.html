@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Games - Logic &amp; Brain Teasers</title>
+    <meta name="description" content="Give your brain a fun workout with the best puzzle games unblocked. Solve tricky levels and test your logic safely at school.">
+
+    <meta name="keywords" content="puzzle games, puzzle games unblocked, logic games, brain games, school puzzle">
+
+    <!-- SEO Canonical -->
+    <link rel="canonical" href="https://subwaysurfers-ubg.github.io/category/puzzle.html">
+
+    <!-- Facebook Meta -->
+    <meta property="og:image" content="https://subwaysurfers-ubg.github.io/assets/img/category-puzzle.webp">
+    <meta property="og:site_name" content="subwaysurfers-ubg.github.io">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Give your brain a fun workout with the best puzzle games unblocked. Solve tricky levels and test your logic safely at school.">
+    <meta property="og:url" content="https://subwaysurfers-ubg.github.io/category/puzzle.html">
+    <meta property="og:title" content="Puzzle Games - Logic &amp; Brain Teasers">
+
+    <!-- X / Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Puzzle Games - Logic &amp; Brain Teasers">
+    <meta name="twitter:description" content="Give your brain a fun workout with the best puzzle games unblocked. Solve tricky levels and test your logic safely at school.">
+    <meta name="twitter:image" content="https://subwaysurfers-ubg.github.io/assets/img/category-puzzle.webp">
+
+    <!-- App Icon -->
+    <link rel="icon" href="https://subwaysurfers-ubg.github.io/assets/img/favicon.png" type="image/png">
+
+    <!-- Inline CSS -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0d1117;
+            color: #c9d1d9;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1135px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #58a6ff;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        header,
+        .compact-header {
+            position: relative;
+        }
+
+        .nav-trigger {
+            display: none;
+            background: transparent;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 6px;
+            z-index: 101;
+        }
+
+        .nav-trigger span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #c9d1d9;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        .nav-trigger.is-active span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+
+        .nav-trigger.is-active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-trigger.is-active span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropbtn {
+            background: none;
+            border: none;
+            color: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            cursor: pointer;
+            font-weight: 600;
+            padding: 8px 0;
+            outline: none;
+        }
+
+        .dropbtn:focus {
+            color: #58a6ff;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: #161b22;
+            min-width: 180px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            z-index: 99;
+            border-radius: 8px;
+            top: 100%;
+            left: 0;
+            border: 1px solid rgba(128, 128, 128, 0.15);
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            color: #c9d1d9;
+            padding: 12px 18px;
+            display: block;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-content a:hover {
+            background: #58a6ff;
+            color: #000000;
+        }
+
+        .dropdown:hover .dropdown-content,
+        .dropdown:focus-within .dropdown-content,
+        .dropdown.is-expanded .dropdown-content {
+            display: block;
+        }
+
+        .align-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            gap: 25px;
+        }
+
+        .gridcontainer {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .appbox {
+            background: #21262d;
+            border-radius: 7px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(128, 128, 128, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .appbox:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+            border-color: #58a6ff;
+        }
+
+        .appbox a {
+            display: block;
+            height: 100%;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .appbox img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+        }
+
+        .itemtitle {
+            display: block;
+            padding: 14px 10px;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .page-title {
+            margin-top: 0;
+            font-size: 32px;
+            font-weight: 800;
+            border-bottom: 3px solid #58a6ff;
+            padding-bottom: 10px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .bottom-seo {
+            background: #21262d;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 40px 0;
+            border: 1px solid rgba(128, 128, 128, 0.1);
+            line-height: 1.8;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .bottom-seo h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #58a6ff;
+        }
+
+        .footer-links {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .pseudo-fullscreen {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            z-index: 99999 !important;
+            background: #000;
+            border: none !important;
+        }
+
+        .bottom-seo p {
+            white-space: pre-line;
+        }
+
+        .txtemoji {
+            display: inline-block;
+            animation: txt-levitate 2.5s ease-in-out infinite;
+        }
+
+        @keyframes txt-levitate {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+        .emoji {
+            display: inline-block;
+            animation: float-emoji 3s ease-in-out infinite;
+        }
+
+        @keyframes float-emoji {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-4px);
+            }
+        }
+
+        .scrollfade {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.7s linear, transform 0.7s linear;
+        }
+
+        .scrollfade.isvisible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes pulse-anim {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.03);
+            }
+        }
+
+        @keyframes hoveranim {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        .navico {
+            display: inline-block;
+            transition: transform 0.2s;
+            margin-right: 4px;
+        }
+
+        a:hover .navico {
+            animation: hoveranim 1s infinite;
+        }
+
+        .compact-header {
+            background: #161b22;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+        }
+
+        .site-logo {
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            text-align: left;
+            word-break: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            line-height: 1.2;
+        }
+
+        .main-wrapper {
+            max-width: 1135px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 40px 20px;
+        }
+
+        .site-footer {
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid rgba(128, 128, 128, 0.2);
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.8;
+            background: #161b22;
+        }
+
+        @media (max-width: 1100px) {
+            .gridcontainer {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .gridcontainer {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 520px) {
+            .gridcontainer {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .nav-trigger {
+                display: flex;
+                position: absolute;
+                right: 20px;
+                top: 22px;
+            }
+
+            .nav-list {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #161b22;
+                flex-direction: column;
+                padding: 15px 20px;
+                z-index: 100;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+                border-top: 1px solid rgba(128, 128, 128, 0.1);
+            }
+
+            .nav-list.show-menu {
+                display: flex;
+            }
+
+            .nav-list li,
+            .dropdown {
+                width: 100%;
+                text-align: left;
+            }
+
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                border: none;
+                padding-left: 15px;
+                border-left: 2px solid #58a6ff;
+                margin-top: 10px;
+                background: transparent;
+                display: none;
+            }
+
+            .dropdown.is-expanded .dropdown-content {
+                display: block;
+            }
+
+            .align-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+    </style>
+
+    <!-- Tracking Setup -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LG7GEBWJDK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-LG7GEBWJDK');
+    </script>
+</head>
+
+<body>
+
+    <header class="compact-header">
+        <div class="container flex-center-header align-header">
+            <a href="https://subwaysurfers-ubg.github.io/" class="site-logo">SUBWAYSURFERS-UBG</a>
+            <nav class="compact-menu">
+                <button class="nav-trigger" aria-label="Menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="https://subwaysurfers-ubg.github.io/category/all.html"><span class="navico">⭐</span> All Games</a></li>
+                    <li><a href="https://subwaysurfers-ubg.github.io/category/shooter.html"><span class="navico">🏹</span> Shooter</a></li>
+                    <li><a href="https://subwaysurfers-ubg.github.io/category/simulation.html"><span class="navico">🏢</span> Simulation</a></li>
+                    <li><a href="https://subwaysurfers-ubg.github.io/category/casual.html"><span class="navico">🎈</span> Casual</a></li>
+                    <li><a href="https://subwaysurfers-ubg.github.io/category/puzzle.html"><span class="navico">🧠</span> Puzzle</a></li>
+                    <li><a href="https://subwaysurfers-ubg.github.io/category/action.html"><span class="navico">💥</span> Action</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn" aria-haspopup="true" aria-expanded="false" role="button">More &#9662;</button>
+                        <div class="dropdown-content" role="menu">
+                            <a href="https://subwaysurfers-ubg.github.io/category/multiplayer.html" role="menuitem"><span class="navico">⚔️</span> Multiplayer</a><a href="https://subwaysurfers-ubg.github.io/category/arcade.html" role="menuitem"><span class="navico">🚀</span> Arcade</a><a href="https://subwaysurfers-ubg.github.io/category/racing.html" role="menuitem"><span class="navico">🏁</span> Racing</a><a href="https://subwaysurfers-ubg.github.io/category/platformer.html" role="menuitem"><span class="navico">👟</span> Platformer</a><a href="https://subwaysurfers-ubg.github.io/category/adventure.html" role="menuitem"><span class="navico">🌋</span> Adventure</a><a href="https://subwaysurfers-ubg.github.io/category/skill.html" role="menuitem"><span class="navico">⚡</span> Skill</a><a href="https://subwaysurfers-ubg.github.io/category/retro.html" role="menuitem"><span class="navico">🕹️</span> Retro</a><a href="https://subwaysurfers-ubg.github.io/category/strategy.html" role="menuitem"><span class="navico">🏰</span> Strategy</a><a href="https://subwaysurfers-ubg.github.io/category/idle.html" role="menuitem"><span class="navico">📈</span> Idle</a><a href="https://subwaysurfers-ubg.github.io/category/sports.html" role="menuitem"><span class="navico">⚽</span> Sports</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container main-wrapper">
+        <div class="clean-inner">
+
+            <h1 class="page-title"><span class="emoji">🏆</span> Puzzle Games</h1>
+
+            <ul class="gridcontainer category-grid">
+                <li class="appbox scrollfade" style="margin-top: 1px;">
+                    <a href="https://subwaysurfers-ubg.github.io/bubble-shooter.html" title="Bubble Shooter">
+
+                        <img alt="Bubble Shooter" src="https://subwaysurfers-ubg.github.io/assets/img/bubble-shooter.webp" loading="lazy">
+                        <span class="itemtitle">Bubble Shooter</span>
+                    </a>
+                </li>
+
+                <li class="appbox scrollfade" style="padding-bottom: 1px;">
+                    <a href="https://subwaysurfers-ubg.github.io/tictactoe.html" title="Tictactoe">
+
+                        <img src="https://subwaysurfers-ubg.github.io/assets/img/tictactoe.webp" alt="Tictactoe" loading="lazy">
+                        <span class="itemtitle">Tictactoe</span>
+                    </a>
+                </li>
+
+                <li class="appbox scrollfade" style="padding-bottom: 1px;">
+                    <a href="https://subwaysurfers-ubg.github.io/2048.html" title="2048">
+
+                        <img src="https://subwaysurfers-ubg.github.io/assets/img/2048.webp" alt="2048" loading="lazy">
+                        <span class="itemtitle">2048</span>
+                    </a>
+                </li>
+
+                <li class="appbox scrollfade" style="flex-basis: calc(100% + 1px);">
+                    <a href="https://subwaysurfers-ubg.github.io/cat-trap.html" title="Cat Trap">
+
+                        <img src="https://subwaysurfers-ubg.github.io/assets/img/cat-trap.webp" alt="Cat Trap" loading="lazy">
+                        <span class="itemtitle">Cat Trap</span>
+                    </a>
+                </li>
+
+                <li class="appbox scrollfade" style="transform: scaleX(1.001);">
+                    <a href="https://subwaysurfers-ubg.github.io/bloxorz.html" title="Bloxorz">
+
+                        <img src="https://subwaysurfers-ubg.github.io/assets/img/bloxorz.webp" alt="Bloxorz" loading="lazy">
+                        <span class="itemtitle">Bloxorz</span>
+                    </a>
+                </li>
+
+                <li class="appbox scrollfade" style="flex-basis: calc(100% + 1px);">
+                    <a href="https://subwaysurfers-ubg.github.io/bob-the-robber-4.html" title="Bob The Robber 4">
+
+                        <img alt="Bob The Robber 4" src="https://subwaysurfers-ubg.github.io/assets/img/bob-the-robber-4.webp" loading="lazy">
+                        <span class="itemtitle">Bob The Robber 4</span>
+                    </a>
+                </li>
+
+                <li class="appbox scrollfade" style="flex-basis: calc(100% + 1px);">
+                    <a href="https://subwaysurfers-ubg.github.io/jumping-shell.html" title="Jumping Shell">
+
+                        <img alt="Jumping Shell" src="https://subwaysurfers-ubg.github.io/assets/img/jumping-shell.webp" loading="lazy">
+                        <span class="itemtitle">Jumping Shell</span>
+                    </a>
+                </li>
+            </ul>
+            <section class="bottom-seo">
+                <article>
+                    <h2>About Puzzle Games</h2>
+                    <p>Ready to flex your brain muscles? Dive into a world of tricky challenges with our brilliant puzzle games! <span class="txtemoji">🧩</span> These are not your average boring school assignments; they are actually super fun. You can try to trap the feline in Cat Trap or slide those tiles to reach 2048.
+
+                        Whenever you need a mental break, loading up puzzle games unblocked is the smartest move. Navigate the tricky blocks in Bloxorz or figure out the physics in Jumping Shell. Playing puzzle games really helps sharpen your logic and problem-solving skills without feeling like actual work. <span style='color:#9370DB;'><u>Think outside the box!</u></span> Having access to clever puzzle games unblocked means you can turn a dull moment into a brain-boosting session. Take your time, plan your moves, and conquer every level in these captivating puzzle games. We guarantee these puzzle games will keep you thinking for hours!</p>
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="copyright">subwaysurfers-ubg.github.io - Home of Subway Surfers Unblocked</div>
+        <div class="footer-links"><a href="https://subwaysurfers-ubg.github.io/page/privacy/">Your Privacy Comes First</a><a href="https://subwaysurfers-ubg.github.io/page/dmca/">Copyright &amp; DMCA</a></div>
+    </footer>
+
+    <script>
+        window.addEventListener('load', function() {
+            var img = new Image();
+            img.src = "https://counter.yadro.ru/hit?t45.1;r=" + encodeURIComponent(document.referrer) + ";u=" + encodeURIComponent(document.URL) + ";h=" + encodeURIComponent(document.title.substring(0, 150)) + ";" + Math.random();
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var btnFullscreen = document.getElementById('btn-fullscreen');
+            var frameWrap = document.getElementById('frame-wrapper');
+            var gameIframe = document.getElementById('game-iframe');
+            var closeFsBtn = document.querySelector('.fs-close-btn');
+
+            function stopGame() {
+                if (gameIframe) {
+                    var src = gameIframe.src;
+                    gameIframe.src = '';
+                    gameIframe.src = src;
+                }
+            }
+
+            if (btnFullscreen && frameWrap) {
+                btnFullscreen.addEventListener('click', function() {
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'fullscreen_click', {
+                            'event_category': 'Engagement'
+                        });
+                    }
+                    if (frameWrap.requestFullscreen) {
+                        frameWrap.requestFullscreen();
+                    } else if (frameWrap.webkitRequestFullscreen) {
+                        frameWrap.webkitRequestFullscreen();
+                    } else {
+                        frameWrap.classList.toggle('pseudo-fullscreen');
+                        if (frameWrap.classList.contains('pseudo-fullscreen')) {
+                            btnFullscreen.innerHTML = '&#10006; Exit Fullscreen';
+                        } else {
+                            btnFullscreen.innerHTML = '&#10021; Fullscreen';
+                            stopGame();
+                        }
+                    }
+                });
+
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && frameWrap.classList.contains('pseudo-fullscreen')) {
+                        frameWrap.classList.remove('pseudo-fullscreen');
+                        btnFullscreen.innerHTML = '&#10021; Fullscreen';
+                        stopGame();
+                    }
+                });
+            }
+
+            if (closeFsBtn && frameWrap) {
+                closeFsBtn.addEventListener('click', function() {
+                    if (document.fullscreenElement || document.webkitFullscreenElement) {
+                        if (document.exitFullscreen) {
+                            document.exitFullscreen();
+                        } else if (document.webkitExitFullscreen) {
+                            document.webkitExitFullscreen();
+                        }
+                    }
+                    frameWrap.classList.remove('pseudo-fullscreen');
+                    if (btnFullscreen) {
+                        btnFullscreen.innerHTML = '&#10021; Fullscreen';
+                    }
+                    stopGame();
+                });
+            }
+
+            var navTrigger = document.querySelector('.nav-trigger');
+            var navList = document.querySelector('.nav-list');
+            if (navTrigger && navList) {
+                navTrigger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    this.classList.toggle('is-active');
+                    navList.classList.toggle('show-menu');
+                    var expanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !expanded);
+                });
+            }
+
+            var dropBtn = document.querySelector('.dropbtn');
+            var dropdown = document.querySelector('.dropdown');
+            if (dropBtn && dropdown) {
+                dropBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('is-expanded');
+                    var expanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !expanded);
+                });
+            }
+
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('isvisible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.1
+                });
+
+                var animElements = document.querySelectorAll('.scrollfade');
+                animElements.forEach(function(el) {
+                    observer.observe(el);
+                });
+            } else {
+                var fallbackElements = document.querySelectorAll('.scrollfade');
+                fallbackElements.forEach(function(el) {
+                    el.classList.add('isvisible');
+                });
+            }
+
+            var gameCards = document.querySelectorAll('.appbox a');
+            gameCards.forEach(function(card) {
+                card.addEventListener('click', function() {
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'play_game', {
+                            'event_category': 'Clicks',
+                            'event_label': this.getAttribute('title') || 'Game Card'
+                        });
+                    }
+                });
+            });
+
+            var startTime = new Date();
+            window.addEventListener('beforeunload', function() {
+                var timeSpent = Math.floor((new Date() - startTime) / 1000);
+                if (typeof gtag !== 'undefined' && timeSpent > 5) {
+                    gtag('event', 'time_on_page', {
+                        'event_category': 'Engagement',
+                        'value': timeSpent
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
